@@ -16,7 +16,7 @@ ENV GOPATH /gopath
 ENV GOROOT /goroot
 ENV PATH $GOROOT/bin:$GOPATH/bin:$PATH
 
-RUN go get github.com/mitchellh/gox
-RUN gox -build-toolchain
+RUN go get github.com/laher/goxc
+RUN goxc -t
 
-CMD go get -d ./... && gox
+CMD go get -d ./... && goxc
